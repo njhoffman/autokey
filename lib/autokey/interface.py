@@ -1013,7 +1013,7 @@ class XInterfaceBase(threading.Thread):
                                 # Only do all this extra work when we actually need it
                                 action = evt.__class__.__name__
                                 keySym = self.localDisplay.keycode_to_keysym(keyCode, 0)
-                                shifted = bool(evt.state & self.modMasks[Key.SHIFT]) ^ bool(evt.state & self.modMasks[Key.CAPSLOCK])
+                                shifted = bool(evt.state & self.modMasks[Key.SHIFT]) 
                                 numlock = bool(evt.state & self.modMasks[Key.NUMLOCK])
                                 altGrid = bool(evt.state & self.modMasks[Key.ALT_GR])
                                 key = self.lookup_string(keyCode, shifted, numlock, altGrid)
